@@ -1,45 +1,26 @@
 
 Create a new rails project:
-  * without git
-```
-rails new URLShortener -G --database=postgresql
-```
+  * without git ```rails new URLShortener -G --database=postgresql```
+  * with git ```rails new URLShortener --database=postgresql```
+  * Add ```--skip-turbolinks``` if you are building a frontend with React
 
-  * with git
-```
-rails new URLShortener --database=postgresql
-```
-
-Add ```--skip-turbolinks``` if you are building a frontend with React
+---
 
 Create database
-```
-bundle exec rails db:create
-```
+  * ```bundle exec rails db:create```
 
 To create a new table
-```
-bundle exec rails generate migration Create<Table>
-```
+  * ```bundle exec rails generate migration Create<Table>```
 
 To make model AND table
-```
-bundle exec rails g model <table name>
-```
+  * ```bundle exec rails g model <table name>```
 
 To run migration, then check status
-```
-bundle exec rails db:migrate
-```
-```
-bundle exec rails db:migrate:status
-```
+  * ```bundle exec rails db:migrate```
+  * ```bundle exec rails db:migrate:status```
 
 Create, migrate and seed
-```
-bundle exec rails db:setup
-```
-
+  * ```bundle exec rails db:setup```
 
 [Dropping Migration Table, Models, Controller](https://gist.github.com/chand/3c646d7ef8f32599ea17ae37c6ebde86)
 
@@ -56,6 +37,8 @@ Naming conventions
     * CeateTableName
 [More Naming Conventions](https://gist.github.com/iangreenleaf/b206d09c587e8fc6399e)
 
+---
+
 Helpful Gems
 ```ruby
  group :development do
@@ -66,26 +49,9 @@ Helpful Gems
      gem 'jquery-rails'
      gem 'bcrypt'
 end
-
 ```
 
-To run annotate gem:
-```
-bundle exec annotate --models
-```
+Run  ```bundle exec annotate --models``` to use annotate gem:
 
 
-suggested rails alias
-```
-alias berr="bundle exec rails"
-```
 
-postgresql alias for windows users
-```
-alias pgstart="sudo service postgresql start"
-```
-
-To open bash file
-```
-code ~/.bashrc
-```
