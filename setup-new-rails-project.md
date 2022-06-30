@@ -1,60 +1,76 @@
+
+Create a new rails project:
+  * without git
+```
 rails new URLShortener -G --database=postgresql
-creates a new rails project
-berr db:create
-creates a database
-bundle exec rails g model <table name>
-makes model and migration
-berr db:migrate
-adds migration
-bundle exec rails d model <table name>
-bundle exec db:drop
-deletes model
-berr db:create then berr db:migrate
-bundle exec rails db:setup
-create, migrate and seed
+```
 
+  * with git
+```
+rails new URLShortener --database=postgresql
+```
+
+Create database
+```
+bundle exec rails db:create
+```
+
+To create a new table
+```
 bundle exec rails generate migration Create<Table>
+```
 
-berr db:create
-berrgm AddColToTable || DeleteColFromTable || CeateTableName
-berr db:migrate
-berr db:migrate:status
-berr g migrations CeateTableName
+To make model AND table
+```
+bundle exec rails g model <table name>
+```
 
-models are name in singular snak_case.rb
-Model class should be single camel in file snake_single.rb
-table lower_snake_plural
+To run migration, then check status
+```
+bundle exec rails db:migrate
+```
+```
+bundle exec rails db:migrate:status
+```
+
+Create, migrate and seed
+```
+bundle exec rails db:setup
+```
+
+
+[Dropping Migration Table, Models, Controller](https://gist.github.com/chand/3c646d7ef8f32599ea17ae37c6ebde86)
+
+Naming conventions
+  * Model classes should be in singular camel case
+    * ClassName
+  * Model files should be in singular snake case
+    * class_name.rb
+  * Tables should be named in lower snake plural
+    * some_tables
+  * Migration naming suggestions
+    * AddColToTable
+    * DeleteColFromTable 
+    * CeateTableName
+[More Naming Conventions](https://gist.github.com/iangreenleaf/b206d09c587e8fc6399e)
 
 To run annotate gem:
+```
 bundle exec annotate --models
+```
 
-in pry run reload! true!
 
-common migration terminal commands
-berrgm Create{TableName}
-berrgm Add{TableName}
-berrgm Remove{TableName}
-berrgm AddIndexTo{TableName}
+suggested rails alias
+```
+alias berr="bundle exec rails"
+```
 
-rails aliases
-alias berr='bundle exec rails'
-alias berrg='bundle exec rails g'
-alias berrgm='bundle exec rails g migration'
-alias berrc='bundle exec rails console'
-alias bea='bundle exec annotate --models'
-alias rdbm='bundle exec rails db:migrate'
-alias rdbms='bundle exec rails db:migrate:status'
-alias rdbr='bundle exec rails db:rollback'
-
-generate a new migration for the db
-function rgm() {
-      if [ -n "$1" ]; then bundle exec rails g migration "$1"; 
-      else bundle exec rails g migration; 
-      fi 
-}
-
-postgresql alias
+postgresql alias for windows users
+```
 alias pgstart="sudo service postgresql start"
+```
 
-open bash file
+To open bash file
+```
 code ~/.bashrc
+```
