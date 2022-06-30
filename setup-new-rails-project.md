@@ -54,6 +54,19 @@ Naming conventions
     * CeateTableName
 [More Naming Conventions](https://gist.github.com/iangreenleaf/b206d09c587e8fc6399e)
 
+Helpful Gems
+```ruby
+ group :development do
+     gem 'pry-rails'
+     gem 'binding_of_caller'
+     gem 'better_errors'
+     gem 'annotate'
+     gem 'jquery-rails'
+     gem 'bcrypt'
+end
+
+```
+
 To run annotate gem:
 ```
 bundle exec annotate --models
