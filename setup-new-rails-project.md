@@ -10,6 +10,8 @@ rails new URLShortener -G --database=postgresql
 rails new URLShortener --database=postgresql
 ```
 
+Add ```--skip-turbolinks``` if you are building a frontend with React
+
 Create database
 ```
 bundle exec rails db:create
