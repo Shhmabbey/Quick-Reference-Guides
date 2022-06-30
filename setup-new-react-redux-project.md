@@ -1,13 +1,15 @@
 Model the project folder to look like the directory tree below:
+```
   index.html
   bundle.js (no need to create this file, webpack will create it for you)
-  frontend
-    * actions
-    * components
-    * reducers
-    * store
-    * util
+  frontend/
+    actions/
+    components/
+    reducers/
+    store/
+    util/
     todo_redux.jsx
+ ```
   
 Create entry file and package.json
 ```
