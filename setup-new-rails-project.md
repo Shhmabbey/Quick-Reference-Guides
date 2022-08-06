@@ -1,7 +1,7 @@
 
 Create a new rails project:
-  * without git ```rails new URLShortener -G --database=postgresql```
-  * with git ```rails new URLShortener --database=postgresql```
+  * without git ```rails new <Project-Name> -G --database=postgresql```
+  * with git ```rails new <Project-Name> --database=postgresql```
   * Add ```--skip-turbolinks``` if you are building a frontend with React
 
 ---
